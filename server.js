@@ -89,13 +89,15 @@ app.post('/create-item', function(req, res) {
 })
 
 app.post('/update-item', function(req, res) {
-   // console.log(req.body.id)
-   let safeText=sanitizer(req.body.text, {allowedTags:[],allowedAttributes:{}})
-    db.collection('items').findOneAndUpdate({_id: new mongodb.ObjectId(req.body.id)}, {$set: {item: safeText}}, function(err,info) {
-     // res.send("Success")
-     res.json(info.ops[0])
-    })
-  })
+  // console.log(req.body.id)
+  let safeText=sanitizer(req.body.text, {allowedTags:[],allowedAttributes:{}})
+
+   db.collection('items').findOneAndUpdate({_id: new mongodb.ObjectId(req.body.id)}, {$set: {item: safeText}}, function() {
+    res.send("Success")
+    
+   })
+ })
+
 
 app.post('/delete-item', function(req,res){
 

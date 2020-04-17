@@ -46,7 +46,7 @@ app.get('/', function (req,res) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple To-Do App</title>
+  <title>To-Do After COVID-19</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
@@ -74,6 +74,10 @@ app.get('/', function (req,res) {
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="/browser.js"></script>
   
+  <footer>
+  <p>Nyzex 2020</p>
+  </footer>
+
 </body>
 </html>
     `)
